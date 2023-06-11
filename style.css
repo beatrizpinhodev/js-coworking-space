@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,500&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -11,15 +13,17 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
 }
 header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 80%;
   margin: 0 auto;
   padding-top: 10px;
+}
+
+header > nav {
+  margin: 0 auto;
 }
 
 button {
@@ -31,7 +35,7 @@ button {
   font-weight: 700;
 }
 
-ul {
+header > nav > ul {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -39,18 +43,14 @@ ul {
   list-style: none;
 }
 
-ul > li {
-  margin-left: 1.875rem;
-}
-
-ul > li > a {
+header > nav > ul > li > a {
   text-decoration: none;
   color: #8c8c8c;
   font-weight: 700;
   padding: 0.625rem 0.938rem;
 }
 
-ul > li > a:hover {
+header > nav > ul > li > a:hover {
   color: #fff;
   background-color: #0973de;
   transition-delay: 0.1s;
@@ -62,18 +62,16 @@ ul > li > a:hover {
   display: flex;
   flex-direction: row;
   width: 80%;
-  height: 100vh;
+
   margin: 0 auto;
 }
 
 .cards .card-left {
   width: 55%;
-  margin-left: 1.875rem;
-  margin-top: 3.125rem;
 }
 
-.cards .card-left h4 {
-  font-size: 0.938rem;
+.cards .card-left h5 {
+  margin-top: 3.125rem;
   margin-bottom: 0.625rem;
 }
 .cards .card-left h1 {
@@ -90,53 +88,103 @@ ul > li > a:hover {
 }
 
 .cards .card-right {
-  position: relative;
   width: 45%;
+  height: 100%;
+}
+.cards .card-right .principal-image {
+  margin-top: 2.5rem;
+  position: relative;
 }
 
-.cards .card-right .principal-image {
+.cards .card-right .principal-image .big-image {
   width: 100%;
   border-radius: 10px;
-  margin-top: 1.563rem;
 }
 
 .cards .card-right .visitors {
-  width: 180px;
-  height: 120px;
   position: absolute;
-  top: 0;
-  right: 0;
-  margin-top: 200px;
-  margin-right: 10px;
-
-  border: 1px solid black;
-  border-radius: 10px;
-
-  background-color: #fff;
-  color: #000;
+  bottom: 15px;
+  right: 15px;
 
   display: flex;
   flex-direction: column;
+
+  width: 45%;
+  height: 45%;
+
+  padding-left: 5px;
+
+  background-color: rgba(255, 255, 255, 0.452);
+
+  border-radius: 10px;
 }
 
+.cards .card-right .visitors img {
+  width: 20%;
+}
 .cards .card-right .visitors-image {
-  width: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+
+  margin-bottom: 1rem;
+}
+
+.cards .card-right .visitors-image span {
+  display: flex;
+  align-items: center;
+
+  width: 35px;
+  height: 35px;
+  padding-left: 4px;
+  border-radius: 50%;
+
+  background-color: #8c8c8c9a;
+  font-size: 1rem;
+}
+
+.cards .card-right h3 {
+  margin-bottom: 0.25rem;
+  font-size: x-large;
+}
+
+.cards .card-right p {
+  font-size: small;
+  font-weight: 700;
+}
+
+.cards-2 {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  text-align: center;
-  margin-bottom: 30px
+  width: 80%;
+
+  background-color: #b3d9ff50;
+  margin: 0 auto;
 }
 
-.cards .card-right .visitors-image img {
-  width: 40px;
+.cards-2 .card-left {
+  position: relative;
+
+  border: 1px solid black;
+  width: 45%;
 }
-.cards .card-right .visitors-image span {
-  border: 1px solid blue;
-  border-radius: 100%;
-  width: 34px;
-  height: 34px;
-  padding: 7px;
-  margin-top: 4px;
-  background-color: lightgray;
+
+.cards-2 .card-left img {
+  width: 100%;
+  border-radius: 10px;
+
+  width: 300px;
+  height: 350px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.cards-2 .card-left .rooms {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  padding: 15px;
+
+  border-radius: 10px;
+  background-color: #fff;
 }
